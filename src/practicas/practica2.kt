@@ -1,7 +1,5 @@
 package practicas
 
-import teoria.elementos_basicos.main
-
 fun main(){
     var caracter: Char
     var caracterAnterior: Char
