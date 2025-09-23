@@ -1,5 +1,85 @@
 package practicas.practica11y12
 
+open class Coche(open val marca:String, open val modelo:String){
+    var velocidad:Double=0.0
+    private set
+    constructor(marca: String, modelo: String, velovidad:Double):this(marca,modelo){
+        this.velocidad=velovidad
+        if (velovidad<0.0){
+            this.velocidad=0.0
+        }
+    }
+    fun acelerar(cantidad:Int){
+        this.velocidad+=cantidad
+        if (this.velocidad<0.0){
+            this.velocidad=0.0
+        }
+    }
+    fun frenar(cantidad:Int){
+        this.velocidad-=cantidad
+        if (this.velocidad<0.0){
+            this.velocidad=0.0
+        }
+    }
+    override fun toString(): String {
+        return "Coche(marca='$marca', modelo='$modelo', velocidad=$velocidad)"
+    }
+}
+
+fun main(){
+    var coche1:Coche= Coche("marca1", "modelo1")
+    var coche2:Coche= Coche("marca2", "modelo2", 10.0)
+    var coche3:Coche= Coche("marca3", "modelo3", -10.0)
+    println("--------------------------------------")
+    println(coche1.toString()+"\n"+coche2.toString()+"\n"+coche3.toString())
+    println("--------------------------------------")
+    println("Aceleramos 30")
+    coche1.acelerar(30)
+    coche2.acelerar(30)
+    coche3.acelerar(30)
+    println(coche1.toString()+"\n"+coche2.toString()+"\n"+coche3.toString())
+    println("--------------------------------------")
+    println("Frenamos 10")
+    coche1.frenar(10)
+    coche2.frenar(10)
+    coche3.frenar(10)
+    println(coche1.toString()+"\n"+coche2.toString()+"\n"+coche3.toString())
+    println("--------------------------------------")
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 class Coche(marca:String, modelo:String) {
     var marca: String
         private set
@@ -72,4 +152,4 @@ fun main(){
     coche3.frenar(10)
     println(coche3.toString())
     println("--------------------------------------")
-}
+}*/

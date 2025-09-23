@@ -5,6 +5,7 @@ class `practica 14` {
 
 
 }
+//open a la class padre para hacer overide en las hijas,
 open class CalculadoraBase(a:Double, b:Double){
     var a: Double
     var b:Double
@@ -13,6 +14,7 @@ open class CalculadoraBase(a:Double, b:Double){
         this.b=b
     }
     fun sumar():Double= a+b
+
 
 }
 

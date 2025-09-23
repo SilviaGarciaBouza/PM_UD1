@@ -1,9 +1,13 @@
 package practicas
 
-fun obtenerCoordenadas():Pair<Double, Double> = 1.1 to 2.2
+fun obternerCoordenadas():Pair<Double,Double> = Pair(1.1,2.2)
 fun obtenerColorRGB():Triple<Int,Int,Int> = Triple(1,2,3)
 
+
 fun main(){
-    println(obtenerCoordenadas())
-    println(obtenerColorRGB())
+    val(x, y)= obternerCoordenadas()
+    println("Coordenadas: $x, $y")
+    var(r,g,b)=obtenerColorRGB()
+    println("Color: $r, $g, $b")
+
 }

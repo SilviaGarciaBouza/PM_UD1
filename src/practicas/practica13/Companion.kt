@@ -1,5 +1,5 @@
 package practicas.practica13
-
+//companion es como static
 class Companion {
     companion object{
         var contador:Int=0
