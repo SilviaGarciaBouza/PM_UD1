@@ -15,6 +15,7 @@ fun main(){
         Empleado("Sonia", 1070.00, "Programación"),
         Empleado("Ana", 5090.00, "Dirección"),
     )
+    //mas soluciones en sus ejemplos
 //1. Obtener el nombre del de mas dinero
     val empSalarioALto= (procesarEmpleados(listaEmpleados, { listaEmpleados.filter{e->e.salario== listaEmpleados.maxOf { empleado -> empleado.salario }}.get(0).nombre}))
     println("Empleado con salario más alto: $empSalarioALto")
@@ -24,11 +25,11 @@ fun main(){
     println("Promedio de salario en Ventas: $promedioVentasSalario")
 
     //3. Lista de Nombres con Salario Mayor a 2500
-    val listaSalariomasDe2500= procesarEmpleados(listaEmpleados, {listaEmpleados.filter { e->e.salario>=2500}.map { e->e.nombre }})
+    val listaSalariomasDe2500= procesarEmpleados(listaEmpleados, {listaEmpleados.filter { e->e.salario>=2500}.map{e->e.nombre}})
     println("Nombres con salario >= 2500: $listaSalariomasDe2500")
 
     //4. Agrupar por departamento
-    val empleadosPorDep=procesarEmpleados(listaEmpleados, {listaEmpleados.groupBy { e->e.departamento }})
+    val empleadosPorDep=procesarEmpleados(listaEmpleados, {listaEmpleados.groupBy { it.departamento }.mapValues { e->e.value.map{e->e.nombre} }})
     println("Empleados por departamento: $empleadosPorDep")
 
 }
