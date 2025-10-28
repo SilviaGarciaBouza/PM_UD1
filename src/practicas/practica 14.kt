@@ -24,6 +24,10 @@ class CalculadoraCientifica(a:Double, b:Double): CalculadoraBase(a, b){
 
 }
 
+
+
+
+
 fun main() {
     println("Prueba de la clase CalculadoraBase")
     val calculadora1 = CalculadoraBase(10.0, 2.0)
